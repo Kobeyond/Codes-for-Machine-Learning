@@ -11,7 +11,8 @@ Given flying miles, ice cream ate every week and video games played, predict whe
 | :-----: | :--------: | :--------: | :--------------:
 | 40920 | 8.326976 | 0.953952 | largeDoses
 | 14488 | 7.153469 | 1.673904 | smallDoses
-| 26052 | 1.441871 | 0.805124 | didntLike ]
+| 26052 | 1.441871 | 0.805124 | didntLike 
+]
   
 ## Handwriting recognization
 Given digit file, which consists of 32 rows and 32 columns with the element 0 or 1, predict the number it represents.
