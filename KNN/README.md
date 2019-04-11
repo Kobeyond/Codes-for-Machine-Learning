@@ -6,8 +6,7 @@ Here, we will use kNN algorithm to predict result for dating website and handwri
 ## Dating website
 Given flying miles, ice cream ate every week and video games played, predict whether Sophia will appreciate the person.  
 
-<center>
-| miles | ice cream | video games | result </center>
+| miles | ice cream | video games | result
 | :-----: | :--------: | :--------: | :--------------:
 | 40920 | 8.326976 | 0.953952 | largeDoses
 | 14488 | 7.153469 | 1.673904 | smallDoses
