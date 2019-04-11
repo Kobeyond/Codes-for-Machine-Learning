@@ -15,4 +15,4 @@ Given flying miles, ice cream ate every week and video games played, predict whe
 ## Handwriting recognization
 Given digit file, which consists of 32 rows and 32 columns with the element 0 or 1, predict the number it represents.
 
-<div align=center><img width="574" height="400" src="KNN/data/digits.png"/></div>
+<div align=center><img width="574" height="400" src="https://github.com/Kobeyond/Codes-for-Machine-Learning/KNN/data/digits.png"/></div>
