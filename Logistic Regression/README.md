@@ -7,4 +7,5 @@ line). In addition, g(z) represents the probability of positive.
 ## Horse Colic classification
 Given various symptoms of a horse, we use logistic regression to predict whether the horse is suffering colic(1 or 0).
 
-![avatar](https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Logistic-Regression/data/logistic.png)
+<img src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Logistic-Regression/data/logistic.png"/>
+
