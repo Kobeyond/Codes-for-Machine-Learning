@@ -13,5 +13,5 @@ In other words, selecting this feature as axis to split the orginal dataset is o
 ## Example: Lenses Judgement
 Given a series of information about the patient(age, tear rate and so on), predict whether the patient is appropriate to use lenses.
 
-<img width='1200' height='534' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Decision%20Tree/data/tree.png"/>
+<img width='1100' height='489' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Decision%20Tree/data/tree.png"/>
 
