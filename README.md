@@ -8,6 +8,7 @@ the codes using `OOP`(hopefully).
 - [Linear Regression](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Linear%20Regression)
 - [Logistic Regression](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Logistic%20Regression)
 - [kNN](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/KNN)
+- [Decision Tree](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Decision%20Tree)
 - [Neural Network (demo)](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Neural%20Network)
 - To be continued... 
 
