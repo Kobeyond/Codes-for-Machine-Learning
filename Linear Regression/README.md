@@ -16,14 +16,16 @@ Use the formulars below, we can easily get all the partial derivatives, and then
 
 <img width='950' height='217' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/linear_formular.png"/>
 
-
 Then the total error will decrease after every iteration:
 
 <img width='405' height='300' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/learning_curve.png"/>
 
+
 - Normal Equation
 
-formular here!!
+In addition, we can also get the optimal weights directively, by using `Normal Equation`.
+<img width='213' height='44' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/normal_equation.png"/>
+
 
 ## Local weighted linear regression (LWLR)
 To avoid general underfit, LWLR includes `local weights` W to measure the distance between input and every example. 
