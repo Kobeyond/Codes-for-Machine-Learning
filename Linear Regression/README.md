@@ -24,7 +24,8 @@ Then the total error will decrease after every iteration:
 - Normal Equation
 
 In addition, we can also get the optimal weights directively, by using `Normal Equation`.
-<img width='213' height='44' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/normal_equation.png"/>
+
+<img width='150' height='30' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/normal_equation.png"/>
 
 
 ## Local weighted linear regression (LWLR)
