@@ -29,8 +29,12 @@ In addition, we can also get the optimal weights directively, by using `Normal E
 
 
 ## Local weighted linear regression (LWLR)
-To avoid general underfit, LWLR includes `local weights` W to measure the distance between input and every example. 
-formular here!!
+To avoid general underfit, LWLR includes `local weights W` to measure the distance between input and training example. `W` is a diagonal  matrix, while the value at position(i,i) measures the distance between input and the i-th sample. It will increase as the distance decreases. Using the formulars below, we can get the weights for LWLR:
+
+<img width='180' height='83' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/LWLR.png"/>
+
+
+The regression line turns out as follow:
 
 <img width='405' height='300' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/lwlr.png"/>
 
