@@ -3,7 +3,7 @@
 Linear regression algorithm is mainly used in regression problems, which means the value of result is continuous instead of discrete.
 It aims at finding a best straight line crossing the dataset, together with a minimal MSE. 
 
-<img width='405' height='300' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/regression_line.png"/>
+<img width='450' height='326' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/regression_line.png"/>
 
 ## Standard linear regression
 
@@ -36,5 +36,5 @@ To avoid general underfit, LWLR includes `local weights W` to measure the distan
 
 The regression line turns out as follow:
 
-<img width='405' height='300' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/lwlr.png"/>
+<img width='450' height='326' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/lwlr.png"/>
 
