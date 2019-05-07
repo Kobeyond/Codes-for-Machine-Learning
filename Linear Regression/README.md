@@ -14,7 +14,7 @@ Assume that we use `MSE` as the cost function, and then we can optimize our mode
 
 Use the formulars below, we can easily get all the partial derivatives, and then feed them to gradient descent:
 
-<img width='950' height='260' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/linear_formular.png"/>
+<img width='950' height='260' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Linear%20Regression/data/linear_formular_new.png"/>
 
 Then the total error will decrease after every iteration:
 
