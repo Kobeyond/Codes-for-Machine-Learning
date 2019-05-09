@@ -19,6 +19,11 @@ First, we randomly initialize the positions of the k cluster centers, and then u
 
 To `avoid local minimum` usually happened in K-means, bisecting K-means algorithm regards the whole dataset as a single cluster at first, and then constantly splits the cluster which causes smaller SSE into two sub-clusters, until there are k clusters in total.
 
+## Elbow Method
+Usually, as k(cluster number) increases, the SSE of our model will probably decrease. Because when k is very small, few clusters couldn't fit many groups of examples well, so SSE maybe large. As k increases, SSE decreases. When k is very large, SSE becomes smaller, however, cluster number now exceeds actual need. (Sometimes, if SSE increases instead, it's probably beacause it drop into local minimum.)
 
+So, we use `elbow method` to estimate the best choice of k: select the number at elbow position:
+
+<img width='500' height='383' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/K-means/data/elbow_method.png"/>
 
 
