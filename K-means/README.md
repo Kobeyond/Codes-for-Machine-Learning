@@ -4,6 +4,9 @@ K-means is a popular cluster algorithm in unsupervised learning, which means we 
 
 Assume that we use `SSE`(sum of square error) to measure the performance of a cluster algorithm, it represents the total distances between every example to its cluster center. A smaller SSE represents a better dataset split.
 
+<img width='250' height='80' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/K-means/data/formular.png"/>
+
+
 
 ## Standard K-means
 
