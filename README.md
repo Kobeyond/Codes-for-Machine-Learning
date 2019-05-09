@@ -1,7 +1,7 @@
 # Codes-for-Machine-Learning
 
 This project covers most of the common machine learning algorithms implemented by `Python3` and `Numpy`. The overall idea of my 
-codes follows the book named `Machine Learning In Action`. However, in order to bulid it as a clearer structure, I encapsule
+codes follows the book named `Machine Learning In Action`. However, in order to bulid it in a clearer structure, I encapsule
 the codes using `OOP`(hopefully). 
 
 ## Completed Algorithm
