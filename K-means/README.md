@@ -22,7 +22,7 @@ To `avoid local minimum` usually happened in K-means, bisecting K-means algorith
 ## Elbow Method
 Usually, as k(cluster number) increases, the SSE of our model will probably decrease. Because when k is very small, few clusters couldn't fit many groups of examples well, so SSE maybe large. As k increases, SSE decreases. When k is very large, SSE becomes smaller, however, cluster number now exceeds actual need. (Sometimes, if SSE increases instead, it's probably beacause it drop into local minimum.)
 
-So, we use `elbow method` to estimate the best choice of k: select the number at elbow position:
+So, we use `elbow method` to estimate the best choice of k: select the number at elbow position empirically:
 
 <img width='500' height='383' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/K-means/data/elbow_method.png"/>
 
