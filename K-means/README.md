@@ -11,11 +11,11 @@ Assume that we use `SSE`(sum of square error) to measure the performance of a cl
 
 
 
-## Standard K-means
+- Standard K-means
 
 First, we randomly initialize the positions of the k cluster centers, and then update them(cluster assignment & cluster movement) constantly until being stable. 
 
-## Bisecting K-means
+- Bisecting K-means
 
 To `avoid local minimum` usually happened in K-means, bisecting K-means algorithm regards the whole dataset as a single cluster at first, and then constantly splits the cluster which causes smaller SSE into two sub-clusters, until there are k clusters in total.
 
