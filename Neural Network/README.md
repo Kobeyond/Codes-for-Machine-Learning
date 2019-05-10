@@ -3,7 +3,7 @@
 ## Forward Propagation
 We we train our neural network or make a prediction over a input, it's essential to pass the input from front to end. It is called `forward propagation`. 
 
-<img width='950' height='195' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Neural%20Network/data/forward_vectorized.png"/>
+<img width='920' height='188' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Neural%20Network/data/forward_vectorized.png"/>
 
 
 
