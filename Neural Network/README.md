@@ -1,4 +1,10 @@
 # Neural Network
+Neural Network is a very powerful and widely used model in machine learning. It can be used to handle not only classification problems, but also regression problems.
+
+Usually, neural network consists of one input layer, one ouotput layer and several hidden layers. Every layer is composed of some units which are called neurons. 
+
+<img width='400' height='304' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Neural%20Network/data/neural_network.png"/>
+
 
 ## Forward Propagation
 We we train our neural network or make a prediction over a input, it's essential to pass the input from front to end. It is called `forward propagation`. 
