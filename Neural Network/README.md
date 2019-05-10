@@ -14,7 +14,7 @@ The `scalar` back propagation formulars are below:
 
 In addition, the completed process of deduction is:
 
-<img width='700' height='809' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Neural%20Network/data/scalar_new.png"/>
+<img width='700' height='793' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Neural%20Network/data/scalar_updated.png"/>
 
 - Vectorized BP
 
