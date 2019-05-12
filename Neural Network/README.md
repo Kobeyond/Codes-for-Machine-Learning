@@ -39,3 +39,9 @@ Similarly, the completed process of deduction is:
 
 <img width='950' height='455' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Neural%20Network/data/vectorized.png"/>
 
+- Extension
+
+Up to now, the vectorized formulars above are based on a single example, because we suppose that input x is a vector. To train our neural network, what we need is to use these formulars to all the examples. And then sum up all the gradients because every iteration of training is based on the whole dataset(Standard Gradient Descent). However, it can be slow to use a 'for' loop over every example.
+
+Therefore, in order to fit the `2-D input`(dataset), we can vectorize the formulars again, which can greatly speed up training process. Then, the variables X, Z, a, y become 2-D matrixes. The formulars are these:
+
