@@ -1,6 +1,11 @@
 # PCA
 `Principal Component Analysis` is a powerful tool in machine learning, which is frequently used to compress and visualize data. On the one hand, compressing the data before training our machine learning model can decrease the memory storage it needs and greatly speed up the training process. On the other hand, by visualizing the compressed data with a 2D or 3D figure, we can easily find some important clues hidden in the data, and then create a effective model for it. 
 
+
+<img width='400' height='300' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/PCA.png"/>
+
+
+
 ## Data Compressing
 
 Data compressing, which is also called dimensionality reduction, tries to find the first axis which remains the largest variance, and then finds the second axis(vertical to other axises), with second largest variance. 
