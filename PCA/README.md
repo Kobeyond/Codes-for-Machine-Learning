@@ -32,15 +32,15 @@ Suppose matrix C is the covariance matrix of dataset X, then C is a real-symmetr
 
 It's very important to choose a appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information in data will be dropped, and little will be remained, which will greatly decrease the performance of our model.
 
-<img width='500' height='365' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/choose_k.png"/>
+<img width='500' height='365' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/choose_k_new.png"/>
 
 So, it's quite troublesome to determine and choose a proper number of principal components. Usually, we choose the smallest k which keeps 90%(for example) of variance at least(α represents the information dropped):
 
-<img width='500' height='116' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/formulars_variance.png"/>
+<img width='450' height='104' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/formulars_variance.png"/>
 
 Fortunately, the variance can be measured by the eigen values(or singular values) as follow:
 
-<img width='335' height='140' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/formulars_singular.png"/>
+<img width='280' height='116' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/singular.png"/>
 
 Tip:
 
