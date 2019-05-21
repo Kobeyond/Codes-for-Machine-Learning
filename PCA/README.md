@@ -16,21 +16,29 @@ Tip: Eigen vectors which correspond larger eigen values, are 'main eigen vectors
 
 ## Data Reconstructing
 
-Suppose that we have reduce the dimensions of dataset X to K-dimensional, by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct original dataset simply using `X = X'·V^T`. The certification process is as follows:
+Suppose that we have reduce the dimensions of dataset X to K-dimensional, by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct an approximate dataset by simply applying `X = X'·V^T`. 
+
+Tip: If K equals N(orginal number of features), then the reconstructed dataset will be exactly the same as original dataset. The certification process is as follows:
 
 Suppose matrix C is the covariance matrix of dataset X, then C is a real-symmetric matrix.
 
-=> Matrix C must contain n linearly-independent eigen vectors.
+=> Matrix C must contain N linearly-independent eigen vectors.
 
-=> Matrix V, which is composed of K eigen vetors(normalized already) above, must be an orthogonal matrix.
+=> Matrix V, which is composed of N eigen vetors(normalized already) above, must be an orthogonal matrix.
 
 => `V·V^T = V^T·V = E`. 
 
-=> According to the combination law of matrix multiplication, `(X·V)·V^T = X·(V·V^T) = X·E = X`. So we can reconstruct original data X by applying another matrix multiplication. 
+=> According to the combination law of matrix multiplication, `(X·V)·V^T = X·(V·V^T) = X·E = X`. So we can reconstruct original dataset  X by applying another matrix multiplication. 
 
 
 ## How to choose K
 
-It's very important to choose a appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information will be dropped, and little will be remained, which will greatly decrease the performance of our model.
+It's very important to choose a appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information in data will be dropped, and little will be remained, which will greatly decrease the performance of our model.
 
-So, it's quite troublesome to determine and choose a proper number of principal components. Usually, we choose the smallest K which keeps 90%(for example) of variance at least. Fortunately, the variance can be measured by the eigen values(or singular values) as follow:
+So, it's quite troublesome to determine and choose a proper number of principal components. Usually, we choose the smallest k which keeps 90%(for example) of variance at least. Fortunately, the variance can be measured by the eigen values(or singular values) as follow:
+
+Tip:
+
+- It's ok to decompose the dataset using either `ED` or `SVD`, because the ED of square matrix is a special case of SVD. In addition, the eigen values and singular values of square matrix are exactly the same when the matrix is square.
+
+- SVD is more computationally effective than ED when the dataset is very large. So in demo2, I decompose the dataset2 using SVD, and finally get the correct answer.
