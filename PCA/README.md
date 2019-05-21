@@ -1,10 +1,7 @@
 # PCA
 `Principal Component Analysis` is a powerful tool in machine learning, which is frequently used to compress and visualize data. On the one hand, compressing the data before training our machine learning model can decrease the memory storage it needs and greatly speed up the training process. On the other hand, by visualizing the compressed data with a 2D or 3D figure, we can easily find some important clues hidden in the data, and then create a effective model for it. 
 
-
 <img width='400' height='300' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/PCA_model.png"/>
-
-
 
 ## Data Compressing
 
@@ -35,7 +32,15 @@ Suppose matrix C is the covariance matrix of dataset X, then C is a real-symmetr
 
 It's very important to choose a appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information in data will be dropped, and little will be remained, which will greatly decrease the performance of our model.
 
-So, it's quite troublesome to determine and choose a proper number of principal components. Usually, we choose the smallest k which keeps 90%(for example) of variance at least. Fortunately, the variance can be measured by the eigen values(or singular values) as follow:
+<img width='500' height='365' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/choose_k.png"/>
+
+So, it's quite troublesome to determine and choose a proper number of principal components. Usually, we choose the smallest k which keeps 90%(for example) of variance at least(α represents the information dropped):
+
+<img width='500' height='116' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/formulars_variance.png"/>
+
+Fortunately, the variance can be measured by the eigen values(or singular values) as follow:
+
+<img width='335' height='140' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/formulars_singular.png"/>
 
 Tip:
 
