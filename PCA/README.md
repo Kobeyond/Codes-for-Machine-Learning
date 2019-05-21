@@ -27,3 +27,10 @@ Suppose matrix C is the covariance matrix of dataset X, then C is a real-symmetr
 => `V·V^T = V^T·V = E`. 
 
 => According to the combination law of matrix multiplication, `(X·V)·V^T = X·(V·V^T) = X·E = X`. So we can reconstruct original data X by applying another matrix multiplication. 
+
+
+## How to choose K
+
+It's very important to choose a appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information will be dropped, and little will be remained, which will greatly decrease the performance of our model.
+
+So, it's quite troublesome to determine and choose a proper number of principal components. Usually, we choose the smallest K which keeps 90%(for example) of variance at least. Fortunately, the variance can be measured by the eigen values(or singular values) as follow:
