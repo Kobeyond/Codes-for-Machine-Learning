@@ -1,7 +1,7 @@
 # PCA
 `Principal Component Analysis` is a powerful tool in machine learning, which is frequently used to compress and visualize data. On the one hand, compressing the data before training our machine learning model can decrease the memory storage it needs and greatly speed up the training process. On the other hand, by visualizing the compressed data with a 2D or 3D figure, we can easily find some important clues hidden in the data, and then create a effective model for it. 
 
-<img width='500' height='375' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/PCA_model.png"/>
+<img width='501' height='394' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/PCA_3D.jpg"/>
 
 ## Data Compressing
 
@@ -14,6 +14,8 @@ Tip: Eigen vectors which correspond larger eigen values, are 'main eigen vectors
 ## Data Reconstructing
 
 Suppose that we have reduce the dimensions of dataset `X` to K-dimensional, by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct an approximate dataset by simply applying `X_appro = X'·V^T`. 
+
+<img width='500' height='375' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/PCA_model.png"/>
 
 Tip: If K equals N(orginal number of features), then the reconstructed dataset will be exactly the same as original dataset. The certification process is as follows:
 
