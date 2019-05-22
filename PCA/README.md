@@ -7,7 +7,7 @@
 
 Data compressing, which is also called dimensionality reduction, tries to find the first axis which remains the largest variance, and then finds the second axis(vertical to other axises), with second largest variance. 
 
-Repeat the process above until you get K axises. Finally, all the axises(vectors) make up the d*K transform matrix. As a result, we can use `matrix multiplication` to convert data from n-dimensional to K-dimensional. 
+Repeat the process above until you get K axises. Finally, all the axises(vectors) make up the d*K transform matrix. As a result, we can use `matrix multiplication X'= X·V` to convert data from n-dimensional to K-dimensional. 
 
 Tip: Eigen vectors which correspond larger eigen values, are 'main eigen vectors'. Choosing vectors with large eigen values will keep as many variances as possible.
 
