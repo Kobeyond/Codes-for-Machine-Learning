@@ -7,13 +7,13 @@
 
 Data compressing, which is also called dimensionality reduction, tries to find the first axis which remains the largest variance, and then finds the second axis(vertical to other axises), with second largest variance. 
 
-Repeat the process above until you get K axises. Finally, all the axises(vectors) make up the d*K transform matrix. As a result, we can use `matrix multiplication X'= X·V` to convert data from n-dimensional to K-dimensional. 
+Repeat the process above until you get K axises. Finally, all the axises(vectors) make up the d*K transform matrix `V`. As a result, we can use `matrix multiplication X'= X·V` to convert data from n-dimensional to K-dimensional. 
 
 Tip: Eigen vectors which correspond larger eigen values, are 'main eigen vectors'. Choosing vectors with large eigen values will keep as many variances as possible.
 
 ## Data Reconstructing
 
-Suppose that we have reduce the dimensions of dataset X to K-dimensional, by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct an approximate dataset by simply applying `X = X'·V^T`. 
+Suppose that we have reduce the dimensions of dataset `X` to K-dimensional, by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct an approximate dataset by simply applying `X_appro = X'·V^T`. 
 
 Tip: If K equals N(orginal number of features), then the reconstructed dataset will be exactly the same as original dataset. The certification process is as follows:
 
@@ -30,7 +30,7 @@ Suppose matrix C is the covariance matrix of dataset X, then C is a real-symmetr
 
 ## How to choose K
 
-It's very important to choose a appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information in data will be dropped, and little will be remained, which will greatly decrease the performance of our model.
+It's very important to choose an appropriate `K` when reducing dimensions: If K is too large, the improvement of data compressing is slim. However, if K is too small, too much critical information in data will be dropped, and little will be remained, which will greatly decrease the performance of our model.
 
 <img width='500' height='365' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/choose_k_new.png"/>
 
