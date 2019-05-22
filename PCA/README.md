@@ -51,3 +51,12 @@ Tip:
 - It's ok to decompose the dataset using either `ED` or `SVD`, because the ED of square matrix is a special case of SVD. In addition, the eigen values and singular values of square matrix are exactly the same when the matrix is square.
 
 - SVD is more computationally effective than ED when the dataset is very large. So in demo2, I decompose the dataset2 using SVD, and finally get the correct answer.
+
+## Use SVD to compress picture
+
+As mentioned above, we can use ED or SVD to decompoese matrix into the representation of smaller matrix multiplication. In other words, we can use some much smaller matrixes to replace original matrix for memory saving.
+
+Here, we compress the picture of digit with SVD, and remain the top2 biggest singular values only. So we only need to save three matrixes of 32*2, 2*2 and 2*32. Namely, saving 130 numbers in total is enough, comparing to 32*32 numbers previously.
+
+Using matrixes U, S and V, we can easily reconstruct an appropriate dataset by `X_appro = U[:, :1]·S[:1, :1]·VT[:1, :]`. The original figure and reconstructed figure are below:
+
