@@ -4,7 +4,7 @@ from simple_dataset import *
 
 """
 Linear regression algorithm is mainly used in regression problems, which means the value of result is continuous.
-It aims at finding a best straight line crossing the dataset, together with a minimal MSE. 
+It aims at finding a best straight line(or surface) crossing the dataset, together with a minimal MSE. 
 """
 class Linear_regression_model(object):
 
@@ -13,12 +13,14 @@ class Linear_regression_model(object):
         self.labels = labels
         self.alpha = alpha
 
+    # make a prediction
     def __call__(self, input):
         return mat(input) * self.weights
 
 
     def gradient_descent(self, iters=100):
         dataset = mat(self.dataset)
+        # convert list to a m*1 vector
         labels = mat(self.labels).T
         size, columns = shape(dataset)
         weights = zeros((columns, 1))
@@ -30,14 +32,14 @@ class Linear_regression_model(object):
             error = sum(multiply(results - labels, results - labels))
             total_error.append(error)
             # Note: the equation is the same as logistic regression, but they are different in theory.
-            partial_derivatives = dataset.T * (results - labels)
-            weights -= self.alpha * partial_derivatives
+            gradients = dataset.T * (results - labels)
+            weights -= self.alpha * gradients
         self.weights = weights
 
         # draw learning curve
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        ax.plot([i for i in range(iters)], total_error)
+        ax.plot(range(1, 1 + iters), total_error)
         plt.xlabel('iteration'); plt.ylabel('Total loss')
         plt.show()
 
@@ -51,6 +53,21 @@ class Linear_regression_model(object):
         xTx = x.T * x
         assert linalg.det(xTx) != 0.0
         self.weights = xTx.I * x.T * y
+
+
+    # Use additional eye matrix to make sure invertible, and use 'shrinkage' to filter useless data.
+    def ridge_regression(self, lam=0.2):
+        # after normalization, dataset is already mat.
+        dataset = self.dataset
+        labels = mat(self.labels).T
+        size, columns = shape(dataset)
+
+        # It can be regarded as an upgraded normal equation.
+        matrix_inv = dataset.T * dataset + lam * eye(columns)
+        assert linalg.det(matrix_inv) != 0.0
+        self.weights = matrix_inv.I * (dataset.T * labels)
+        return self.weights
+
 
     def draw_regression_line(self):
         # Plot all the training examples
