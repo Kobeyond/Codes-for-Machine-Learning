@@ -5,9 +5,7 @@ from horse_dataset import *
 
 def test_simple_dataset():
     my_dataset = Test_model_dataset('data/testSet.txt')
-    dataset = my_dataset.dataset
-    labels = my_dataset.labels
-    model = Logistic_regression_model(dataset, labels)
+    model = Logistic_regression_model(my_dataset.dataset, my_dataset.labels)
 
     # Update weights.
     model.gradient_descent()
@@ -23,19 +21,16 @@ def test_simple_dataset():
 def test_horse_colic():
     # create training set and test set.
     my_train_dataset = Horse_dataset('data/horseColicTraining.txt')
-    train_set = my_train_dataset.dataset
-    train_labels = my_train_dataset.labels
-
     my_test_dataset = Horse_dataset('data/horseColicTest.txt')
     test_set = my_test_dataset.dataset
     test_labels = my_test_dataset.labels
 
-    # construct LR model, and optimize it.
-    model = Logistic_regression_model(train_set, train_labels)
-    # model.gradient_descent()
-    model.SGD()
+    # Create LR model, and optimize it.
+    model = Logistic_regression_model(my_train_dataset.dataset, my_train_dataset.labels)
+    model.gradient_descent(100000)
+    # model.SGD()
 
-    # test every example in test set.
+    # Test every example in test set.
     err_count = 0.0
     test_size = len(test_set)
     for i in range(test_size):
