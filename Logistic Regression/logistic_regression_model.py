@@ -1,7 +1,6 @@
 from numpy import *
 import matplotlib.pyplot as plt
 
-
 """
 Logistic Regression algorithm is mainly used to binary classification, which aims at finding a best decision boundary
 to separate the training examples. While z >= 0 means positive (above the line), and z <= 0 means negative(beyond the
@@ -19,28 +18,29 @@ class Logistic_regression_model(object):
         # Note that x is a vector.
         return 1 / (1 + exp(-x))
 
+    # make a prediction
     def __call__(self, input):
-        # inner product between two vectors.
+        # Inner product between two vectors:
         z = mat(input) * self.weights
         prob = self.sigmod(z)
         if prob >= 0.5: return 1
         else: return 0
 
 
-    def gradient_descent(self):
-        dataset = mat(self.dataset)  # [size, columns]
-        labels = mat(self.labels).transpose()  # [size, 1]
+    def gradient_descent(self, iters=5000):
+        dataset = mat(self.dataset)
+        labels = mat(self.labels).T
         size, columns = shape(self.dataset)
-        weights = zeros((columns, 1))  # [columns, 1]
+        weights = zeros((columns, 1))
 
-        # Use gradient descent to update the weights 500 times.
-        for i in range(100000):
+        # Use gradient descent to update the weights, iters times in total.
+        for i in range(iters):
             z = dataset * weights
             probs = self.sigmod(z)  # [size, 1]
 
-            # This is matrix mult between columns×size & size×1
-            partial_derivatives = dataset.transpose() * (probs - labels.astype('float64'))   # [columns, 1]
-            weights -= self.learning_rate * partial_derivatives  # [columns, 1]
+            # This is matrix multi between columns*size and size*1
+            gradients = dataset.T * (probs - labels.astype('float64'))   # [columns, 1]
+            weights -= self.learning_rate * gradients  # [columns, 1]
         self.weights = weights
 
 
@@ -55,9 +55,9 @@ class Logistic_regression_model(object):
             z = dataset[i] * weights
             prob = self.sigmod(z)
 
-            # This is matrix mult between columns×1 & 1×1
-            partial_derivatives = dataset[i].transpose() * (prob - self.labels[i])
-            weights -= self.learning_rate * partial_derivatives
+            # This is matrix mult between columns*1 and 1*1
+            gradients = dataset[i].T * (prob - self.labels[i])
+            weights -= self.learning_rate * gradients
         self.weights = weights
 
 
@@ -91,7 +91,6 @@ class Logistic_regression_model(object):
         plt.show()
 
 
-
 if __name__ == '__main__':
     # Initialize LR model.
     dataset = [[1, -0.017612, 14.053064], [1, -1.395634, 4.662541], [1, -0.752157, 6.538620], [1, -1.322371, 7.152853]]
@@ -99,7 +98,7 @@ if __name__ == '__main__':
     model = Logistic_regression_model(dataset, labels)
 
     # Update weights.
-    model.gradient_descent()
+    model.gradient_descent(iters=10000)
     # model.SGD()
     print('weights after gradient descent: {}'.format(model.weights))
 
@@ -108,7 +107,3 @@ if __name__ == '__main__':
     print('result: %d' % result)
 
     model.draw_decision_boundary()
-
-
-
-
