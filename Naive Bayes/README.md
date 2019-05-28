@@ -15,7 +15,10 @@ As we know, the probability of simultaneous occurrences based on independent eve
 
 ## Example1: Judging Insulting Comments
 
-Given series of labeled (insulting or not) comments from website, train a bayes model to judge whether a comment is insulting.
+Given series of labeled (insulting or not) comments from website, train a bayes model to judge whether a comment is insulting. The dataset turns out like this:
+
+ <img width='440' height='213' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/Naive%20Bayes/data/posts.png"/>
+
 
 ## Example2: Spam or Ham
 
