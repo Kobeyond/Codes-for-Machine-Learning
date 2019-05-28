@@ -27,7 +27,7 @@ class Base_dataset(object):
                 data_vec[self.vocal.index(word)] = 1
 
                 # Bag-of-words model
-                # post_vec[self.vocal.index(word)] += 1
+                # data_vec[self.vocal.index(word)] += 1
             else:
                 print('The word \'%s\' is not in the vocabulary!' % word)
         # Finally, we get the one-hot vector of this sample.
