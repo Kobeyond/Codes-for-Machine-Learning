@@ -65,8 +65,10 @@ As mentioned above, we can use ED or SVD to decompoese matrix into the represent
 Here, we compress the picture of digit with SVD. If we remain the top2 biggest singular values only. So we only need to save three matrixes of 32×2, 2×2 and 2×32. Namely, saving 130 numbers in total is enough, comparing to 32×32 numbers previously.
 
 Using matrixes U, S and V, we can easily reconstruct an appropriate dataset by the formular as follow: 
+
 <img width='540' height='40' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/transform3.png"/>
 
 
 The original figure and reconstructed figures(from K=1 to 7) are below:
+
 <img width='800' height='845' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/digit_recon.png"/>
