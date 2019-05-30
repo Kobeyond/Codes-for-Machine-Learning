@@ -7,17 +7,25 @@
 
 Data compressing, which is also called dimensionality reduction, tries to find the first axis which remains the largest variance, and then finds the second axis(vertical to other axises), with second largest variance······
 
-Repeat the process above until you get K axises. Finally, all the axises(vectors) make up the d*K transform matrix `V`. As a result, we can use `matrix multiplication X'= X·V` to convert data from n-dimensional to K-dimensional. 
+Repeat the process above until you get K axises. Finally, all the axises(vectors) make up the d*K transform matrix `V`. As a result, we can use `matrix multiplication X'= X·V` to convert data from n-dimensional to K-dimensional as follow:
+
+<img width='140' height='31' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/transform1.png"/>
+
+
 
 Tip: Eigen vectors which correspond larger eigen values, are 'main eigen vectors'. Choosing vectors with large eigen values will keep as many variances as possible.
 
 ## Data Reconstructing
 
-Suppose that we have converted the dimension of dataset `X` to K-dimensional by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct an approximate dataset by simply applying `X_appro = X'·V^T`:
+Suppose that we have converted the dimension of dataset `X` to K-dimensional by using `X'= X·V`, while V is a d*K matrix consists of K d-dimensional vectors. We can reconstruct an approximate dataset by simply applying `X_appro = X'·V^T` as follow:
+
+<img width='200' height='38' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/transform2.png"/>
+
+The blue spots above are original dataset, and the red spots are reconstructed dataset when K=1:
 
 <img width='500' height='375' src="https://github.com/Kobeyond/Codes-for-Machine-Learning/blob/master/PCA/data/PCA_model.png"/>
 
-(The blue spots above are original dataset, and the red spots are reconstructed dataset when K=1). 
+ 
 
 Tip: If K equals N(orginal number of features), then the reconstructed dataset will be exactly the same as original dataset. The only change to the dataset is that the originally tilted data is now rotated to align with the axises.The certification process is as follows:
 
