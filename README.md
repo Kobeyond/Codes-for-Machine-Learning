@@ -7,9 +7,11 @@ the codes using `OOP`(hopefully), and add some mathematical principles and detai
 ## Completed Algorithm
 - [Linear Regression](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Linear%20Regression)
 - [Logistic Regression](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Logistic%20Regression)
+- [Naive Bayes](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Naive%20Bayes)
 - [kNN](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/KNN)
 - [Decision Tree](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Decision%20Tree)
 - [K-means](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/K-means)
+- [PCA](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/PCA)
 - [Neural Network (demo)](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Neural%20Network)
 - To be continued... 
 
