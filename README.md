@@ -3,7 +3,7 @@
 This project covers most of the common machine learning algorithms implemented by `Python3` and `Numpy`. The overall idea of my 
 codes follows the book named `Machine Learning In Action`. 
 
-However, in order to rebulid it in a clearer structure, I encapsule the codes using `OOP`(hopefully), and add many `mathematical principles` in detail, which are not mentioned in the book, to many algorithms. 
+However, in order to reconstruct it in a clearer way, I encapsule the codes using `OOP`(hopefully), and add many `mathematical principles` in detail, which are not mentioned in the book, to many algorithms. 
 
 ## Completed Algorithm
 - [Linear Regression](https://github.com/Kobeyond/Codes-for-Machine-Learning/tree/master/Linear%20Regression)
